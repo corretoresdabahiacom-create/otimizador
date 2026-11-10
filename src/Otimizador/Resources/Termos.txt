@@ -1,0 +1,182 @@
+══════════════════════════════════════════════════════════════════════════════════
+        CONTRATO DE LICENÇA DE USO DE SOFTWARE (EULA INTERNACIONAL)
+                         SOFTWARE DE OTIMIZAÇÃO E MANUTENÇÃO
+                         Versão 3.0 | Atualizado: 2026
+══════════════════════════════════════════════════════════════════════════════════
+
+1. ACEITAÇÃO EXPRESSA DOS TERMOS E CONDIÇÕES
+──────────────────────────────────────────────────────────────────────────────────
+Ao instalar, acessar ou utilizar este software, o USUÁRIO declara, de forma 
+LIVRE, INFORMADA e INEQUÍVOCA que:
+
+• Leu integralmente este contrato
+• Compreendeu todos os riscos envolvidos
+• Concorda integralmente com todas as cláusulas
+• Assume total responsabilidade pelo uso
+
+CASO NÃO CONCORDE, DEVERÁ ENCERRAR IMEDIATAMENTE O USO.
+
+O clique em "Aceitar e continuar" constitui assinatura eletrônica válida e vinculante.
+
+──────────────────────────────────────────────────────────────────────────────────
+2. NATUREZA DO SOFTWARE E RISCOS ENVOLVIDOS
+──────────────────────────────────────────────────────────────────────────────────
+O software tem como finalidade:
+
+• Otimização de desempenho
+• Limpeza de arquivos
+• Gerenciamento de processos
+• Ajustes de sistema operacional
+
+O USUÁRIO DECLARA CIÊNCIA DE QUE:
+
+⚠ O SOFTWARE INTERAGE DIRETAMENTE COM O SISTEMA OPERACIONAL  
+⚠ PODE ALTERAR CONFIGURAÇÕES CRÍTICAS  
+⚠ PODE EXCLUIR ARQUIVOS DIRETA OU INDIRETAMENTE  
+⚠ PODE AFETAR O FUNCIONAMENTO DO SISTEMA  
+
+E, MESMO COM TODAS AS MEDIDAS DE SEGURANÇA:
+
+• Pode ocorrer perda de dados
+• Pode ocorrer corrupção de arquivos
+• Pode ocorrer instabilidade do sistema
+• Pode ocorrer necessidade de formatação
+
+O USO É TOTALMENTE POR CONTA E RISCO DO USUÁRIO.
+
+──────────────────────────────────────────────────────────────────────────────────
+3. AUTORIZAÇÕES EXPRESSAS DO USUÁRIO
+──────────────────────────────────────────────────────────────────────────────────
+O USUÁRIO AUTORIZA EXPRESSAMENTE o software a:
+
+• Executar comandos no sistema operacional
+• Acessar, modificar ou excluir arquivos necessários à otimização
+• Gerenciar e alterar processos em execução
+• Ajustar configurações internas do sistema
+
+O USUÁRIO COMPROMETE-SE a:
+
+• Conceder todas as permissões necessárias (administrador)
+• Não interferir indevidamente na execução
+• Utilizar o software de forma consciente
+
+──────────────────────────────────────────────────────────────────────────────────
+4. LIMITAÇÃO ABSOLUTA DE RESPONSABILIDADE
+──────────────────────────────────────────────────────────────────────────────────
+NA MÁXIMA EXTENSÃO PERMITIDA PELA LEI:
+
+O DESENVOLVEDOR, SÓCIOS, EMPRESAS RELACIONADAS E COLABORADORES NÃO SERÃO 
+RESPONSÁVEIS POR:
+
+• Perda de dados, arquivos ou informações
+• Danos ao sistema operacional
+• Danos a hardware ou software
+• Interrupção de atividades
+• Perda de lucros, receitas ou oportunidades
+• Vazamento ou exposição acidental de dados
+• Falhas decorrentes de incompatibilidade
+
+INCLUSIVE SE TAIS DANOS FOREM:
+
+• PREVISÍVEIS
+• CONHECIDOS
+• OU INFORMADOS PREVIAMENTE
+
+A RESPONSABILIDADE TOTAL, SE EXISTENTE, FICA LIMITADA AO VALOR EFETIVAMENTE 
+PAGO PELO USUÁRIO PELO SOFTWARE.
+
+──────────────────────────────────────────────────────────────────────────────────
+5. PRIVACIDADE E DADOS
+──────────────────────────────────────────────────────────────────────────────────
+O software pode coletar dados técnicos mínimos para funcionamento, incluindo:
+
+• Identificador do dispositivo
+• Logs de desempenho
+• Informações de uso
+
+Apesar das medidas de segurança:
+
+⚠ PODE OCORRER ACESSO ACIDENTAL A DADOS DO USUÁRIO  
+⚠ PODE OCORRER EXPOSIÇÃO NÃO INTENCIONAL  
+
+O USUÁRIO DECLARA CIÊNCIA E CONSENTE EXPRESSAMENTE COM ESSES RISCOS.
+
+O tratamento de dados seguirá, quando aplicável:
+
+• LGPD (Brasil)
+• GDPR (União Europeia)
+• Outras legislações internacionais aplicáveis
+
+──────────────────────────────────────────────────────────────────────────────────
+6. LICENÇA DE USO
+──────────────────────────────────────────────────────────────────────────────────
+O software é licenciado, não vendido.
+
+É PROIBIDO:
+
+• Copiar, distribuir ou revender sem autorização
+• Realizar engenharia reversa
+• Modificar ou criar derivados
+• Utilizar para fins ilícitos ou concorrenciais
+
+──────────────────────────────────────────────────────────────────────────────────
+7. USO INTERNACIONAL
+──────────────────────────────────────────────────────────────────────────────────
+O software pode ser utilizado globalmente.
+
+O USUÁRIO é responsável por:
+
+• Cumprir as leis locais
+• Verificar compatibilidade legal no seu país
+
+Este contrato será interpretado de forma a ter validade máxima em qualquer 
+jurisdição.
+
+──────────────────────────────────────────────────────────────────────────────────
+8. CANCELAMENTO E DIREITO DE ARREPENDIMENTO
+──────────────────────────────────────────────────────────────────────────────────
+O usuário poderá cancelar conforme legislação aplicável:
+
+• Brasil: até 7 dias (CDC)
+• União Europeia: até 14 dias
+• Outros países: conforme legislação local
+
+Após esse período, não há reembolso, salvo obrigação legal.
+
+──────────────────────────────────────────────────────────────────────────────────
+9. ATUALIZAÇÕES E MODIFICAÇÕES
+──────────────────────────────────────────────────────────────────────────────────
+O desenvolvedor poderá:
+
+• Atualizar o software automaticamente
+• Alterar funcionalidades
+• Modificar estes termos
+
+O uso contínuo implica aceitação das alterações.
+
+──────────────────────────────────────────────────────────────────────────────────
+10. PROTEÇÃO DO DESENVOLVEDOR E SÓCIOS
+──────────────────────────────────────────────────────────────────────────────────
+Nenhum sócio, administrador ou desenvolvedor poderá ser responsabilizado 
+pessoalmente por quaisquer danos decorrentes do uso do software.
+
+Toda e qualquer responsabilidade limita-se à pessoa jurídica, quando aplicável.
+
+──────────────────────────────────────────────────────────────────────────────────
+11. LEGISLAÇÃO E FORO
+──────────────────────────────────────────────────────────────────────────────────
+Este contrato será regido pelas leis do Brasil.
+
+Fica eleito o foro da comarca do desenvolvedor, com renúncia a qualquer outro, 
+salvo disposições obrigatórias de direito do consumidor em outras jurisdições.
+
+──────────────────────────────────────────────────────────────────────────────────
+12. DISPOSIÇÕES FINAIS
+──────────────────────────────────────────────────────────────────────────────────
+• Este contrato constitui o acordo integral entre as partes
+• A nulidade de uma cláusula não invalida as demais
+• O não exercício de um direito não implica renúncia
+
+══════════════════════════════════════════════════════════════════════════════════
+    ⚠️ AO CLICAR EM "Aceitar e continuar", VOCÊ CONCORDA E ASSUME TODOS OS RISCOS ⚠️
+══════════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,50 @@
+OTIMIZADOR PC PRO — GUIA RÁPIDO
+
+PAINEL
+• Mostra a nota de saúde do PC (0 a 100) com base em espaço livre, memória, lixo acumulado, programas na inicialização e proteção do Windows.
+• "Otimizar agora" faz uma manutenção completa: limpa temporários, relatórios de erro, logs antigos, cache do Windows Update e dos navegadores (fechados), libera memória e limpa o cache DNS. A Lixeira NÃO é esvaziada.
+• Manutenção automática: com o app aberto ou na bandeja, repete a limpeza segura no intervalo escolhido.
+
+LIMPEZA
+• Clique em "Analisar" para ver o tamanho de cada categoria e marque o que quer limpar.
+• Arquivos temporários só são removidos se tiverem mais de 24 horas, para não atrapalhar instalações em andamento.
+• Arquivos em uso são pulados automaticamente. Nenhum documento, foto ou senha é apagado.
+• Feche o navegador para limpar o cache dele.
+
+DESEMPENHO
+• Modo Gamer: plano Alto desempenho, Modo de Jogo do Windows, sem gravação em segundo plano, prioridade ao programa em primeiro plano, fecha os apps escolhidos e libera memória. Ao desativar, tudo volta como estava.
+• Modo Economia (notebook): plano Equilibrado e processador a 99% só na bateria (desliga o Turbo): menos calor e mais autonomia.
+• Ajustes individuais: cada interruptor aplica ou desfaz um ajuste. Os valores originais ficam guardados para desfazer com exatidão.
+
+INICIALIZAÇÃO
+• Lista os programas que abrem com o Windows (registro e pasta Inicializar).
+• "Desativar" funciona como no Gerenciador de Tarefas: nada é apagado e você pode reativar quando quiser.
+
+PROGRAMAS
+• Pesquise e desinstale programas. O desinstalador oficial de cada programa é aberto.
+
+DUPLICADOS
+• Procura arquivos com conteúdo idêntico (comparação real do conteúdo, não só do nome).
+• "Marcar cópias" mantém o arquivo mais antigo de cada grupo. Os removidos vão para a Lixeira.
+
+PRIVACIDADE
+• Limpa listas de arquivos recentes, históricos do Explorador e da caixa Executar.
+• Ajustes do Windows: telemetria, ID de publicidade, sugestões no Iniciar, pesquisa na web, histórico de atividades, Widgets e Copilot.
+
+FERRAMENTAS
+• Proteção do Windows: firewall, antivírus, UAC e atualizações pendentes.
+• Otimizar unidades, Verificar disco, Reparar o Windows (DISM + SFC), Ponto de restauração, Limpar DNS, Redefinir rede, Limpeza de Disco, Windows Update e Drivers.
+
+AGENDAMENTOS
+• Crie tarefas diárias, semanais ou mensais. Se o PC estiver desligado no horário, a tarefa roda quando o app abrir.
+
+CONFIGURAÇÕES
+• Tema claro/escuro, iniciar com o Windows (na bandeja), manutenção automática, licença, "Desfazer todos os ajustes", termos, suporte e registro de atividades.
+
+DICAS
+• Crie um ponto de restauração antes de aplicar muitos ajustes.
+• O app não coleta nem envia nenhum dado. Tudo funciona sem internet.
+• O registro de atividades (Configurações › Registro de atividades) mostra tudo o que foi alterado.
+
+SUPORTE
+admmeuarmazem@gmail.com — resposta em até 48 horas úteis.

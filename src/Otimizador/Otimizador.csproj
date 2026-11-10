@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+
+    <AssemblyName>OtimizadorPCPro</AssemblyName>
+    <RootNamespace>Otimizador</RootNamespace>
+    <ApplicationIcon>Icone.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+
+    <Version>3.1.0</Version>
+    <Product>Otimizador PC PRO</Product>
+    <Company>OtimizadorPRO</Company>
+    <AssemblyTitle>Otimizador PC PRO</AssemblyTitle>
+    <Description>Otimizador PC PRO — limpeza e manutenção do Windows</Description>
+    <Copyright>© 2026 OtimizadorPRO</Copyright>
+
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>false</SelfContained>
+    <PlatformTarget>x64</PlatformTarget>
+
+    <!-- Leveza: nenhum pacote NuGet, sem PDB no Release e só recursos pt-BR -->
+    <DebugType Condition="'$(Configuration)' == 'Release'">none</DebugType>
+    <SatelliteResourceLanguages>pt-BR</SatelliteResourceLanguages>
+    <TieredPGO>true</TieredPGO>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Termos.txt" LogicalName="Termos.txt" />
+    <EmbeddedResource Include="Resources\Ajuda.txt" LogicalName="Ajuda.txt" />
+  </ItemGroup>
+
+</Project>

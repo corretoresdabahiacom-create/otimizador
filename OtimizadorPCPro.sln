@@ -1,0 +1,36 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6BB71BED-E0D7-4AC9-A393-19E27B051A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otimizador", "src\Otimizador\Otimizador.csproj", "{FF4B3494-2730-430B-8B37-E72C36C4AE2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{52BE6BCC-B13B-4809-B0EE-9CDC69FFC810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeradorLicencas", "tools\GeradorLicencas\GeradorLicencas.csproj", "{08752DE2-7666-4FE2-AEF9-A374B6BA34B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF4B3494-2730-430B-8B37-E72C36C4AE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF4B3494-2730-430B-8B37-E72C36C4AE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF4B3494-2730-430B-8B37-E72C36C4AE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF4B3494-2730-430B-8B37-E72C36C4AE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08752DE2-7666-4FE2-AEF9-A374B6BA34B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08752DE2-7666-4FE2-AEF9-A374B6BA34B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08752DE2-7666-4FE2-AEF9-A374B6BA34B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08752DE2-7666-4FE2-AEF9-A374B6BA34B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF4B3494-2730-430B-8B37-E72C36C4AE2C} = {6BB71BED-E0D7-4AC9-A393-19E27B051A0C}
+		{08752DE2-7666-4FE2-AEF9-A374B6BA34B5} = {52BE6BCC-B13B-4809-B0EE-9CDC69FFC810}
+	EndGlobalSection
+EndGlobal

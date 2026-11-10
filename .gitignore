@@ -1,0 +1,10 @@
+bin/
+obj/
+publicar/
+saida/
+*.user
+.vs/
+# NUNCA versione a chave privada de licenças nem certificados
+tools/GeradorLicencas/chave-privada.pem
+*.pfx
+*.pem

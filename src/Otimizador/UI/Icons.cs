@@ -1,0 +1,60 @@
+namespace Otimizador.UI;
+
+/// <summary>Ícones da fonte "Segoe Fluent Icons" (Windows 11) / "Segoe MDL2 Assets" (Windows 10). Sem imagens = app leve.</summary>
+internal static class Icons
+{
+    public const string Home = "";
+    public const string Clean = "";
+    public const string Delete = "";
+    public const string Lightning = "";
+    public const string Speed = "";
+    public const string Game = "";
+    public const string Power = "";
+    public const string Apps = "";
+    public const string Copy = "";
+    public const string Shield = "";
+    public const string Repair = "";
+    public const string Calendar = "";
+    public const string Settings = "";
+    public const string Search = "";
+    public const string Refresh = "";
+    public const string Check = "";
+    public const string Cancel = "";
+    public const string Add = "";
+    public const string Edit = "";
+    public const string Warning = "";
+    public const string Info = "";
+    public const string Help = "";
+    public const string Mail = "";
+    public const string Folder = "";
+    public const string FolderOpen = "";
+    public const string Document = "";
+    public const string Photo = "";
+    public const string Globe = "";
+    public const string Sync = "";
+    public const string List = "";
+    public const string Clock = "";
+    public const string Video = "";
+    public const string Processing = "";
+    public const string Display = "";
+    public const string Battery = "";
+    public const string Contact = "";
+    public const string Permissions = "";
+    public const string History = "";
+    public const string Chat = "";
+    public const string Windows = "";
+    public const string Memory = "";
+    public const string Disk = "";
+    public const string Moon = "";
+    public const string Sun = "";
+    public const string Play = "";
+    public const string Pause = "";
+    public const string Stop = "";
+    public const string Chevron = "";
+    public const string Lock = "";
+    public const string Restore = "";
+    public const string Heart = "";
+    public const string Open = "";
+    public const string Star = "";
+    public const string Network = "";
+}
