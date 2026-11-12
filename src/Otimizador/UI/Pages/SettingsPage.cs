@@ -90,6 +90,28 @@ internal sealed class SettingsPage : Page
         Section("Ajustes do Windows",
             new SettingRow(Icons.Restore, "Desfazer todos os ajustes", "Restaura os valores originais de tudo que foi alterado nas páginas Desempenho e Privacidade.", Tone.Warning, undoAll));
 
+        // Atualizações
+        var checkUpd = new ToggleSwitch { Checked = s.CheckUpdates };
+        checkUpd.CheckedChanged += (_, _) => { s.CheckUpdates = checkUpd.Checked; Settings.Save(); };
+        var checkNow = new UiButton("Verificar agora", ButtonKind.Secondary, Icons.Refresh);
+        checkNow.Click += async (_, _) =>
+        {
+            checkNow.Enabled = false;
+            try
+            {
+                var (update, reached) = await Updater.CheckAsync();
+                if (!reached) MainForm.Instance?.ShowToast("Não foi possível verificar agora. Confira sua conexão.", Tone.Warning);
+                else if (update == null) MainForm.Instance?.ShowToast("Você já está na versão mais recente.");
+                else if (MessageBox.Show(FindForm(), $"A versão {update.Version} está disponível (você usa a {AppInfo.Version}). Abrir a página de download?",
+                             "Atualização", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                    Shell.Open(update.Url);
+            }
+            finally { checkNow.Enabled = true; }
+        };
+        Section("Atualizações",
+            new SettingRow(Icons.Sync, "Avisar sobre novas versões", "Uma vez por dia o app consulta o GitHub para saber se há versão nova. Nenhum dado seu é enviado e nada é instalado sozinho.", Tone.Accent, checkUpd),
+            new SettingRow(Icons.Refresh, "Verificar agora", "Versão instalada: " + AppInfo.Version + ".", Tone.Accent, checkNow));
+
         // Sobre
         var help = new UiButton("Abrir", ButtonKind.Secondary, Icons.Help);
         help.Click += (_, _) => { using var v = new TextViewer("Ajuda — " + AppInfo.Name, AppInfo.ReadResource("Ajuda.txt")); v.ShowDialog(FindForm()); };
@@ -108,7 +130,7 @@ internal sealed class SettingsPage : Page
         var exit = new UiButton("Sair do app", ButtonKind.Ghost, Icons.Power);
         exit.Click += (_, _) => MainForm.Instance?.ExitApp();
         Section("Sobre",
-            new SettingRow(Icons.Info, AppInfo.Name + " " + AppInfo.Version, "Leve, sem coleta de dados e sem conexão com a internet.", Tone.Accent, exit),
+            new SettingRow(Icons.Info, AppInfo.Name + " " + AppInfo.Version, "Leve e sem coleta de dados. A única conexão é a consulta opcional de novas versões.", Tone.Accent, exit),
             new SettingRow(Icons.Help, "Ajuda", "O que cada função faz e quando usar.", Tone.Accent, help),
             new SettingRow(Icons.Document, "Termos de uso", "Contrato de licença aceito na instalação.", Tone.Accent, terms),
             new SettingRow(Icons.Mail, "Suporte", AppInfo.SupportEmail + " · resposta em até 48 h úteis.", Tone.Accent, mail),

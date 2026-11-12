@@ -2,7 +2,7 @@
 ; Compile com CriarInstalador.bat (na raiz do projeto) depois de rodar Publicar.bat.
 
 #define AppName "Otimizador PC PRO"
-#define AppVersion "3.1.0"
+#define AppVersion "3.2.0"
 #define AppExe "OtimizadorPCPro.exe"
 
 [Setup]

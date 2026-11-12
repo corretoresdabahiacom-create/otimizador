@@ -14,7 +14,7 @@ internal static class AppInfo
     public static readonly CultureInfo PtBr = CultureInfo.GetCultureInfo("pt-BR");
 
     public static string Version { get; } =
-        Assembly.GetExecutingAssembly().GetName().Version is { } v ? $"{v.Major}.{v.Minor}.{v.Build}" : "3.1.0";
+        Assembly.GetExecutingAssembly().GetName().Version is { } v ? $"{v.Major}.{v.Minor}.{v.Build}" : "3.2.0";
 
     public static string DataDir { get; } = CreateDir(Path.Combine(
         Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "OtimizadorPRO"));

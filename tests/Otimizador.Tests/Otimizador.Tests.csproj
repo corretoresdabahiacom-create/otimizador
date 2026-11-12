@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Testes sem nenhum pacote externo: compilam só as partes puras do app (sem interface/registro).
+       Rodar: dotnet run (dentro desta pasta) -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>Otimizador.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\src\Otimizador\Core\Versions.cs" Link="App\Versions.cs" />
+    <Compile Include="..\..\src\Otimizador\Core\LicenseCodec.cs" Link="App\LicenseCodec.cs" />
+    <Compile Include="..\..\src\Otimizador\Core\FileWalker.cs" Link="App\FileWalker.cs" />
+  </ItemGroup>
+</Project>

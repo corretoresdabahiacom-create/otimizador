@@ -14,7 +14,7 @@
     <ApplicationIcon>Icone.ico</ApplicationIcon>
     <ApplicationManifest>app.manifest</ApplicationManifest>
 
-    <Version>3.1.0</Version>
+    <Version>3.2.0</Version>
     <Product>Otimizador PC PRO</Product>
     <Company>OtimizadorPRO</Company>
     <AssemblyTitle>Otimizador PC PRO</AssemblyTitle>

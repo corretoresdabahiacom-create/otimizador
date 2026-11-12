@@ -39,6 +39,9 @@ internal sealed class Settings
 
     public bool MigratedFromV2 { get; set; }
 
+    public bool CheckUpdates { get; set; } = true;
+    public DateTime? LastUpdateCheck { get; set; }
+
     // ─────────────────────────────────────────────────────────────────────
     [JsonIgnore] private static readonly string FilePath = Path.Combine(AppInfo.DataDir, "config.json");
     [JsonIgnore] private static readonly object Gate = new();

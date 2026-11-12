@@ -63,6 +63,15 @@ internal sealed class MainForm : Form, IThemed
         _autoTimer.Start();
         ApplyTheme();
         ShowPage(PageDashboard);
+        _ = NotifyUpdateAsync();
+    }
+
+    private async Task NotifyUpdateAsync()
+    {
+        var info = await Updater.CheckIfDueAsync();
+        if (info == null || IsDisposed) return;
+        ShowToast($"Nova versão {info.Version} disponível. Veja em Configurações.", Tone.Accent);
+        Notify("Atualização disponível", $"{AppInfo.Name} {info.Version} já pode ser baixado.");
     }
 
     // ── Páginas ───────────────────────────────────────────────────────────

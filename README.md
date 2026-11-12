@@ -1,4 +1,4 @@
-# Otimizador PC PRO 3.1
+# Otimizador PC PRO 3.2
 
 App de limpeza e manutenção para Windows 10/11 (x64), em C# / Windows Forms (.NET 8).
 Reescrito do zero a partir da versão 2: **leve (≈ 0,6 MB)**, sem nenhum pacote NuGet, com interface
@@ -15,10 +15,11 @@ src/Otimizador/              ← o aplicativo
   UI/                        ← tema, controles desenhados, janela principal, diálogos
   UI/Pages/                  ← uma classe por página
   Resources/                 ← Termos.txt e Ajuda.txt (embutidos no .exe)
+tests/Otimizador.Tests/      ← testes automáticos (licença, versões, limpeza de pastas)
 tools/GeradorLicencas/       ← ferramenta do VENDEDOR para emitir chaves (não distribuir)
 instalador/setup.iss         ← instalador Inno Setup (baixa o .NET 8 se faltar)
 Publicar.bat                 ← gera publicar\OtimizadorPCPro.exe
-CriarInstalador.bat          ← gera saida\OtimizadorPCPro_Setup_3.1.0.exe
+CriarInstalador.bat          ← gera saida\OtimizadorPCPro_Setup_3.2.0.exe
 publicar/OtimizadorPCPro.exe ← executável já compilado (pronto para testar)
 ```
 
@@ -37,6 +38,24 @@ CriarInstalador.bat       :: instalador em saida\
 ```
 
 Ou abra `OtimizadorPCPro.sln` no Visual Studio 2022 e rode o projeto **Otimizador**.
+
+## Testes automáticos
+
+```bat
+dotnet run --project tests\Otimizador.Tests
+```
+
+Sem nenhum pacote externo. Cobrem a leitura e a assinatura das licenças (inclusive chaves adulteradas e falsas),
+a comparação de versões, a leitura da resposta do GitHub e a varredura segura de pastas (não segue atalhos, não apaga
+pastas novas). A cada envio ao GitHub, o fluxo `.github/workflows/ci.yml` compila o app e roda esses testes.
+
+## Atualizações
+
+Uma vez por dia o app consulta `api.github.com/repos/corretoresdabahiacom-create/otimizador/releases/latest`
+(só a versão publicada, nenhum dado do usuário é enviado). Se houver versão maior, mostra um aviso e, em
+Configurações > Atualizações, abre a página de download. Nada é baixado nem instalado sozinho. O usuário pode desligar
+a opção. Para lançar uma versão: aumente `<Version>` no `Otimizador.csproj` e em `instalador/setup.iss`, gere o
+instalador e crie uma Release no GitHub com a tag `vX.Y.Z` e o instalador anexado.
 
 ## Licenças (importante)
 
@@ -64,7 +83,7 @@ dotnet run -- verificar <CHAVE>                                  :: confere uma 
 * Configurações: `%LocalAppData%\OtimizadorPRO\config.json`
 * Registro de atividades: `%LocalAppData%\OtimizadorPRO\logs\otimizador.log`
 * "Iniciar com o Windows": tarefa agendada `OtimizadorPCPro` (necessária porque o app roda como administrador)
-* Nenhum dado é enviado para a internet.
+* Nenhum dado do usuário é enviado para a internet. A única conexão é a consulta opcional de novas versões (veja "Atualizações").
 
 ## Funções
 
