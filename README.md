@@ -17,6 +17,7 @@ src/Otimizador/              ← o aplicativo
   Resources/                 ← Termos.txt e Ajuda.txt (embutidos no .exe)
 tests/Otimizador.Tests/      ← testes automáticos (licença, versões, limpeza de pastas)
 tools/GeradorLicencas/       ← ferramenta do VENDEDOR para emitir chaves (não distribuir)
+site/                        ← página de download (Cloudflare Pages)
 instalador/setup.iss         ← instalador Inno Setup (baixa o .NET 8 se faltar)
 Publicar.bat                 ← gera publicar\OtimizadorPCPro.exe
 CriarInstalador.bat          ← gera saida\OtimizadorPCPro_Setup_3.2.0.exe
@@ -38,6 +39,18 @@ CriarInstalador.bat       :: instalador em saida\
 ```
 
 Ou abra `OtimizadorPCPro.sln` no Visual Studio 2022 e rode o projeto **Otimizador**.
+
+## Página de download (Cloudflare Pages)
+
+A pasta `site/` tem a página de download (HTML puro, sem build). Para publicar:
+
+1. No painel da Cloudflare: **Workers & Pages > Create > Pages > Connect to Git** e escolha este repositório.
+2. **Build command:** deixe vazio. **Build output directory:** `site`. Branch de produção: `main`.
+3. Salve. A cada envio ao GitHub a página é atualizada sozinha, e o endereço `*.pages.dev` fica pronto na hora.
+4. Para usar seu domínio: **Custom domains** no projeto Pages.
+
+A cada versão nova: atualize em `site/index.html` o número da versão e o código SHA-256 (o valor está em
+`release/OtimizadorPCPro.exe.sha256`).
 
 ## Testes automáticos
 

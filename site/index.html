@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Otimizador PC PRO</title>
+<meta name="description" content="Limpeza e manutenção para Windows 10 e 11. Leve (0,6 MB), com ajustes reversíveis e sem coleta de dados.">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%236366f1'/%3E%3Cstop offset='1' stop-color='%230ea5e9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Cpath d='M36 8 18 36h12l-4 20 20-30H34z' fill='white'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f7f8fc; --surface: #ffffff; --text: #151a2e; --muted: #5a6280; --line: #e3e6f1;
+    --accent: #4f46e5; --accent-2: #0ea5e9; --accent-ink: #ffffff; --soft: #eef0ff; --ok: #0f9d6b; --warn-bg: #fff7e6; --warn-line: #f2d58a;
+    --shadow: 0 10px 30px rgba(40, 50, 120, .10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1120; --surface: #161a2e; --text: #eceffa; --muted: #a2a9c6; --line: #272c47;
+      --accent: #818cf8; --accent-2: #38bdf8; --accent-ink: #0e1120; --soft: #1d2242; --ok: #34d399; --warn-bg: #2a2412; --warn-line: #5b4a1a;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1120; --surface: #161a2e; --text: #eceffa; --muted: #a2a9c6; --line: #272c47;
+    --accent: #818cf8; --accent-2: #38bdf8; --accent-ink: #0e1120; --soft: #1d2242; --ok: #34d399; --warn-bg: #2a2412; --warn-line: #5b4a1a;
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .wrap { width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+  header.top { padding: 18px 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -.01em; }
+  .logo { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); display: grid; place-items: center; }
+  .logo svg { width: 18px; height: 18px; fill: #fff; }
+
+  .hero { padding: 40px 0 28px; text-align: center; }
+  .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.1; letter-spacing: -.03em; margin: 0 0 14px; }
+  .hero h1 span { background: linear-gradient(120deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.lead { max-width: 620px; margin: 0 auto 26px; color: var(--muted); font-size: 1.1rem; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 12px; border: 0; cursor: pointer;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: var(--accent-ink); font: inherit; font-weight: 700; text-decoration: none;
+    box-shadow: 0 8px 22px rgba(79, 70, 229, .35); transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(79, 70, 229, .42); }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 3px; }
+  .btn svg { width: 20px; height: 20px; fill: currentColor; }
+  .meta { margin-top: 14px; color: var(--muted); font-size: .92rem; }
+  .meta b { color: var(--text); font-weight: 600; }
+
+  h2 { font-size: 1.5rem; letter-spacing: -.02em; margin: 0 0 6px; }
+  section { padding: 30px 0; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px; box-shadow: var(--shadow); }
+  .card h3 { margin: 10px 0 4px; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+  .ico { width: 40px; height: 40px; border-radius: 11px; background: var(--soft); display: grid; place-items: center; color: var(--accent); }
+  .ico svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 8px; }
+  .stat { text-align: center; padding: 16px 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; }
+  .stat b { display: block; font-size: 1.6rem; letter-spacing: -.02em; color: var(--accent); }
+  .stat span { color: var(--muted); font-size: .9rem; }
+
+  ol.steps { margin: 0; padding: 0; list-style: none; counter-reset: s; display: grid; gap: 12px; }
+  ol.steps li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 14px 56px; position: relative; }
+  ol.steps li::before { content: counter(s); position: absolute; left: 14px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--soft); color: var(--accent); font-weight: 700; display: grid; place-items: center; }
+  code, .hash { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .88em; }
+  code { background: var(--soft); padding: 2px 6px; border-radius: 6px; }
+  .hash { display: block; margin-top: 8px; padding: 10px 12px; background: var(--soft); border-radius: 10px; overflow-wrap: anywhere; user-select: all; }
+
+  .note { background: var(--warn-bg); border: 1px solid var(--warn-line); border-radius: 14px; padding: 14px 16px; }
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+
+  footer { padding: 28px 0 44px; color: var(--muted); font-size: .92rem; border-top: 1px solid var(--line); margin-top: 24px; }
+  footer .row { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap brand">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M36 6 16 36h13l-4 22 23-32H34z"/></svg></div>
+    Otimizador PC PRO
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Seu Windows <span>leve e organizado</span></h1>
+    <p class="lead">Limpa arquivos temporários, libera memória, controla a inicialização e ajusta o desempenho. Tudo com “Desfazer” e sem enviar dados seus para lugar nenhum.</p>
+    <a class="btn" id="download" href="https://github.com/corretoresdabahiacom-create/otimizador/raw/main/release/OtimizadorPCPro.exe" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4L11 13.6V4a1 1 0 0 1 1-1ZM5 19a1 1 0 1 1 0-2h14a1 1 0 1 1 0 2H5Z"/></svg>
+      Baixar para Windows
+    </a>
+    <p class="meta"><b>Versão 3.2.0</b> · Windows 10 e 11 (64 bits) · 0,6 MB</p>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" aria-label="Números do aplicativo">
+      <div class="stat"><b>0,6 MB</b><span>tamanho do programa</span></div>
+      <div class="stat"><b>100%</b><span>ajustes reversíveis</span></div>
+      <div class="stat"><b>0</b><span>dados coletados</span></div>
+      <div class="stat"><b>Claro/Escuro</b><span>tema automático</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>O que ele faz</h2>
+      <p class="sub">Cada função é real e fica registrada no histórico de atividades.</p>
+      <div class="grid">
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg></div><h3>Limpeza segura</h3><p>Temporários, relatórios de erro, cache do Windows Update, miniaturas, navegadores fechados e Lixeira. Só apaga o que tem mais de 24 horas e nunca arquivos em uso.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Modo Gamer e Economia</h3><p>Plano de energia, Modo de Jogo e fechamento de apps escolhidos por você. Ao desativar, tudo volta como estava.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg></div><h3>Inicialização</h3><p>Ative ou desative programas que abrem com o Windows, do mesmo jeito do Gerenciador de Tarefas.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg></div><h3>Duplicados</h3><p>Compara o conteúdo dos arquivos, envia para a Lixeira e nunca remove todas as cópias.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6z"/></svg></div><h3>Privacidade</h3><p>Apaga rastros de uso (recentes, caixa Executar, área de transferência) e aplica ajustes de privacidade reversíveis.</p></div>
+        <div class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Manutenção automática</h3><p>Agendamentos diários, semanais ou mensais, que continuam valendo mesmo depois de fechar o app.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Como instalar</h2>
+      <p class="sub">Três passos, menos de um minuto.</p>
+      <ol class="steps">
+        <li><b>Instale o .NET 8 Desktop Runtime</b> se ainda não tiver (é gratuito e da Microsoft). <a href="https://dotnet.microsoft.com/download/dotnet/8.0" rel="noopener">Baixar o .NET 8</a>.</li>
+        <li><b>Baixe e abra o Otimizador PC PRO.</b> O Windows vai pedir permissão de administrador, necessária para limpar e ajustar o sistema.</li>
+        <li><b>Digite sua chave de licença</b> na primeira abertura. Não tem uma? Fale com o suporte abaixo.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="note">
+        <b>Aviso do Windows SmartScreen.</b> Como o arquivo ainda não tem assinatura digital de editor, o Windows pode mostrar “O Windows protegeu seu PC”. Se você baixou desta página, clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>. Para ter certeza de que o arquivo não foi alterado, confira o código abaixo.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Conferir o arquivo</h2>
+      <p class="sub">No Prompt de Comando, rode <code>certutil -hashfile OtimizadorPCPro.exe SHA256</code> e compare:</p>
+      <span class="hash" id="hash">10b006506cdb173c6e3cc384068b394148eecf93f5f38ad1b50b077dc373cfa2</span>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Perguntas frequentes</h2>
+      <details><summary>O programa envia algum dado meu?</summary><p>Não. Uma vez por dia ele só consulta se existe versão nova no GitHub, sem enviar nada seu, e você pode desligar isso em Configurações. Nada é instalado sozinho.</p></details>
+      <details><summary>Dá para desfazer o que o app mudou?</summary><p>Sim. Os ajustes guardam o valor original e há um botão “Desfazer todos os ajustes” em Configurações. As limpezas de arquivos não podem ser desfeitas, por isso o app só apaga itens seguros; duplicados vão para a Lixeira.</p></details>
+      <details><summary>Por que ele precisa ser executado como administrador?</summary><p>Para limpar pastas do sistema, trocar o plano de energia e criar a tarefa de “Iniciar com o Windows”.</p></details>
+      <details><summary>Funciona em Windows 7, 8 ou 32 bits?</summary><p>Não. Requer Windows 10 (versão 1809 ou mais nova) ou Windows 11, em 64 bits.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Otimizador PC PRO</span>
+    <span>Suporte: <a href="mailto:admmeuarmazem@gmail.com">admmeuarmazem@gmail.com</a> · resposta em até 48 h úteis</span>
+    <span><a href="https://github.com/corretoresdabahiacom-create/otimizador" rel="noopener">Código-fonte no GitHub</a></span>
+  </div>
+</footer>
+</body>
+</html>
