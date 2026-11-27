@@ -88,15 +88,25 @@ internal static class LicenseTests
             Equal("AB12", LicenseCodec.Normalize("a-b 1 2"));
         });
 
-        t.Test("rejeita chave adulterada", () =>
+        t.Test("rejeita chave adulterada em qualquer posição", () =>
         {
             var key = Issue(signer, "Teste", 0, 5);
-            for (int pos = 0; pos < key.Length; pos += 7)
+            True(LicenseCodec.TryDecode(key, pub, out _, out _, out _), "a chave original deveria valer");
+            for (int pos = 0; pos < key.Length; pos++)
             {
                 var chars = key.ToCharArray();
                 chars[pos] = chars[pos] == 'A' ? 'B' : 'A';
                 True(!LicenseCodec.TryDecode(new string(chars), pub, out _, out _, out _), $"alteração na posição {pos} passou");
             }
+        });
+
+        t.Test("rejeita símbolo a mais e bits de preenchimento sujos", () =>
+        {
+            var key = Issue(signer, "Teste", 0, 5);
+            True(!LicenseCodec.TryDecode(key + "0", pub, out _, out _, out _), "símbolo extra passou");
+            var chars = key.ToCharArray();
+            chars[^1] = Alphabet[(Alphabet.IndexOf(chars[^1]) + 1) % 32]; // mexe no preenchimento do último símbolo
+            True(!LicenseCodec.TryDecode(new string(chars), pub, out _, out _, out _), "preenchimento alterado passou");
         });
 
         t.Test("rejeita chave assinada por outra chave privada", () =>

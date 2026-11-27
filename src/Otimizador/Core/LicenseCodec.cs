@@ -63,6 +63,9 @@ internal static class LicenseCodec
                 buffer &= (1 << bits) - 1;
             }
         }
+        // Leitura estrita: os bits que sobram no último símbolo são só preenchimento e têm de ser zero,
+        // e não pode haver símbolo a mais. Assim cada chave tem uma única grafia válida.
+        if (bits >= 5 || buffer != 0) return null;
         return bytes.ToArray();
     }
 }
